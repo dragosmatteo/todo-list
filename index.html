@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="shortcut icon" href="./img/To-do-List-scaled.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>TO-DO List</title>
 </head>
 <body>
     <header>
         <h3 class="title">To Do List</h3>
     </header>
-    <div class="wrapper">
+    <div class="wrapper" data-aos="zoom-out" data-aos-delay="50">
         <div class="inputField">
             <input type="text" placeholder="Add your new task...">
             <button>+</button>
@@ -37,5 +38,10 @@
     </footer> -->
 
     <script src="./app.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
