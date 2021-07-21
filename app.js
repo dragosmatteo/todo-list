@@ -49,10 +49,9 @@ function showTasks(){
     inputBox.value = "";
     
     if (listArr.length > 0) {
-    clearAll.classList.add('active');
-    
+        clearAll.classList.add('active');
     } else {
-            clearAll.classList.remove('active');
+        clearAll.classList.remove('active');
     }
 };
 
