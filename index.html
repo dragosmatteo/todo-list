@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dragos Web Dev' make this TO-DO list responsive, He used JS for this app :)">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/all.min.css">
-    <link rel="shortcut icon" href="./img/To-do-List-scaled.jpg">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>TO-DO List</title>
-</head>
-<body>
-    <header>
-        <h3 class="title">To Do List</h3>
-    </header>
-    <div class="wrapper" data-aos="zoom-out" data-aos-delay="50">
-        <div class="inputField">
-            <input type="text" placeholder="Add your new task...">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+         name="description"
+         content="Dragos Web Dev' make this TO-DO list responsive, He used JS for this app :)"
+      />
+      <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/all.min.css" />
+      <link rel="shortcut icon" href="./img/To-do-List-scaled.jpg" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <title>TO-DO List</title>
+   </head>
+   <body>
+      <header>
+         <h3 class="title">To Do List</h3>
+      </header>
+      <div class="wrapper" data-aos="zoom-out" data-aos-delay="50">
+         <div class="inputField">
+            <input type="text" placeholder="Add your new task..." />
             <button>+</button>
-        </div>
+         </div>
 
-        <ul class="todolist">
-            <!-- <li>Homework <i class="fas fa-trash-alt"></i></li>
-            <li>Job <i class="fas fa-trash-alt"></i></li>
-            <li>Workout <i class="fas fa-trash-alt"></i></li> -->
-        </ul>
-    
-        <div class="footer">
+         <ul class="todolist"></ul>
+
+         <div class="footer">
             <span>You have <span class="pending"></span> pending tasks.</span>
             <button>Clear all</button>
-        </div>
-    </div>
+         </div>
+      </div>
 
-    <!-- <footer>
-        <p> &copy; This app is made by <a href="dragosmatteo.gihub.io">Dragos Matteo </a></p>
-    </footer> -->
+      <script src="./app.js"></script>
 
-    <script src="./app.js"></script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-</body>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
+   </body>
 </html>
