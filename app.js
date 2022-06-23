@@ -14,7 +14,7 @@ if (getLocalStorage) {
 inputBox.onkeyup = () => {
    let userData = inputBox.value;
 
-   if (userData.trim() != 0) {
+   if (userData.length > 0) {
       addBtn.classList.add("active");
    } else {
       addBtn.classList.remove("active");
@@ -26,7 +26,7 @@ showTasks();
 addBtn.onclick = () => {
    let userData = inputBox.value;
 
-   if (userData.trim().length > 0) {
+   if (userData.length > 0) {
       listArr.push(userData);
       localStorage.setItem("New Task", JSON.stringify(listArr));
       addBtn.classList.remove("active");
@@ -34,6 +34,20 @@ addBtn.onclick = () => {
 
    showTasks();
 };
+
+// inputBox.addEventListener("keyup", (event) => {
+//    let userData = inputBox.value;
+
+//    if (event.keyCode === "13") {
+//       event.preventDefault();
+
+//       listArr.push(userData);
+//       localStorage.setItem("New Task", JSON.stringify(listArr));
+//       addBtn.classList.remove("active");
+//    }
+
+//    showTasks();
+// });
 
 function showTasks() {
    pending.textContent = listArr.length;
