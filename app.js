@@ -23,31 +23,29 @@ inputBox.onkeyup = () => {
 
 showTasks();
 
-addBtn.onclick = () => {
-   let userData = inputBox.value;
-
-   if (userData.length > 0) {
-      listArr.push(userData);
+function addTask(value) {
+   if (value.length > 0) {
+      listArr.push(value);
       localStorage.setItem("New Task", JSON.stringify(listArr));
       addBtn.classList.remove("active");
    }
+}
 
+addBtn.onclick = () => {
+   let userData = inputBox.value;
+   addTask(userData);
    showTasks();
 };
 
-// inputBox.addEventListener("keyup", (event) => {
-//    let userData = inputBox.value;
+inputBox.addEventListener("keyup", (event) => {
+   let userData = inputBox.value;
 
-//    if (event.keyCode === "13") {
-//       event.preventDefault();
-
-//       listArr.push(userData);
-//       localStorage.setItem("New Task", JSON.stringify(listArr));
-//       addBtn.classList.remove("active");
-//    }
-
-//    showTasks();
-// });
+   if (event.keyCode === 13) {
+      event.preventDefault();
+      addTask(userData);
+      showTasks();
+   }
+});
 
 function showTasks() {
    pending.textContent = listArr.length;
