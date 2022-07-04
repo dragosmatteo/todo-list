@@ -29,6 +29,10 @@ body {
    font-style: italic;
 }
 
+.margin {
+   margin: 0 10px;
+}
+
 .wrapper {
    margin: 50px auto;
    max-width: 500px;
