@@ -1,7 +1,7 @@
 const inputBox = document.querySelector(".inputField input");
 const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todolist");
-const clearAll = document.querySelector(".footer button");
+const clearAll = document.querySelector(".tasks button");
 const pending = document.querySelector(".pending");
 var listArr = [];
 
